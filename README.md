@@ -1,0 +1,1 @@
+The WebChat application is the modern scalabel and distributed chat application using GoLang as the backend techstack and websocket concepts.
