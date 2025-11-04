@@ -7,11 +7,11 @@ import (
 	"webchat/internal/ws"
 
 	"github.com/gorilla/websocket"
-	"github.com/labstack/echo"
+	"github.com/labstack/echo/v4"
 )
 
 var upgrader = websocket.Upgrader{
-	checkOrigin: func(r *http.Request) bool { return true },
+	CheckOrigin: func(r *http.Request) bool { return true },
 }
 
 func RegisterRoutes(e *echo.Echo, hub *ws.Hub) {
@@ -19,7 +19,7 @@ func RegisterRoutes(e *echo.Echo, hub *ws.Hub) {
 		return c.File("client/index.html")
 	})
 	e.GET("/ws", func(c echo.Context) error {
-		uderId := c.QueryParam("user_id")
+		userId := c.QueryParam("user_id")
 		conn, err := upgrader.Upgrade(c.Response(), c.Request(), nil)
 		if err != nil {
 			return err

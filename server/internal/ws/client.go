@@ -26,8 +26,8 @@ func (c *Client) ReadPump() {
 			break
 		}
 		store.DB.Create(&model.Message{
-			SenderID:   msg.SenderId,
-			ReceiverID: msg.ReceiverId,
+			SenderID:   msg.SenderID,
+			ReceiverID: msg.ReceiverID,
 			Content:    msg.Content,
 		})
 		c.Hub.Broadcast <- OutboundMessage{
