@@ -14,12 +14,12 @@ import (
 func main() {
 	os.Setenv("DB_HOST", "localhost")
 	os.Setenv("DB_USER", "postgres")
-	os.Setenv("DB_PASSWORD", "1234")
+	os.Setenv("DB_PASSWORD", "ayush123")
 	os.Setenv("DB_NAME", "webchat")
 	os.Setenv("DB_PORT", "5432")
 
 	store.ConnectDatabase()
-	store.DB.AutoMigrate(&ws.OutboundMessage{})
+	// store.DB.AutoMigrate(&ws.OutboundMessage{})
 	store.DB.AutoMigrate(&model.Message{})
 	hub := ws.NewHub()
 
