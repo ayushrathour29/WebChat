@@ -8,6 +8,14 @@ It’s designed with scalability and modularity in mind — capable of handling 
 ⚠️ Note: This project is currently in active development. Features and structure may change as it evolves toward a production-ready release.
 
 
+![alt text](image.png)
+User 1 with ID 1234
+
+![alt text](image-1.png)
+User 2 with ID 1567
+
+
+
 Features
 
 ✅ Real-Time Messaging — Users can send and receive messages instantly using WebSocket connections.
